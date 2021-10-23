@@ -7,13 +7,9 @@ const linksSocialMedia = {
 }
 
 function changeSocialMedia() {
-  /*document.getElementById('userName').textContent = 'Yasuo Hasaki'*/
-  /*Só pode fazer esse comando se for um id*/
-  userName.textContent = 'Yasuo Hasaki'
   for (let li of socialLinks.children) {
     const social = li.getAttribute('class')
     li.children[0].href = `https://${social}.com/${linksSocialMedia[social]}`
-    alert(li.children[0].href)
   }
 }
 
@@ -30,5 +26,5 @@ function getGitHubProfileInfos() {
         (nameUserGit.textContent = data.login)
     })
 }
-
+changeSocialMedia()
 getGitHubProfileInfos()
